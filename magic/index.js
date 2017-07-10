@@ -1,3 +1,5 @@
+/* Author : https://mayankshekhar03.github.io */
+
 var len = 25 * 60 * 1000; // default 25 minitues in milisecs
 var breakt = 5 * 60 * 1000; // breaktime
 var pause = true;
@@ -63,7 +65,7 @@ $(document).ready(function(){
     });
     $('#minus').click(function(){
         if (pause){
-            if (len > 1)
+            if (len > 60000)
                 len -= 60000;
             var l = Math.floor(len / (1000 * 60));
             $('#len').text(l);
@@ -84,7 +86,7 @@ $(document).ready(function(){
     });
     $('#bminus').click(function(){
         if (pause){
-            if (breakt > 1)
+            if (breakt > 60000)
                 breakt -= 60000;
             var b = Math.floor(breakt / (1000 * 60));
             $('#breakt').text(b);
@@ -92,5 +94,15 @@ $(document).ready(function(){
                 $('#time').text(b);
             }
         }
+    });
+    $('#reset').click(function(){
+        clearInterval(x);
+        len = 25 * 60 * 1000; // default 25 minitues in milisecs
+        breakt = 5 * 60 * 1000; // breaktime
+        pause = true;
+        breaktime = false;
+        now = 0;
+        $('#time').text('25');
+        $('#des').text('Session: ');
     });
 });
