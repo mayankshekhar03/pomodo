@@ -96,7 +96,6 @@ $(document).ready(function(){
         }
     });
     $('#reset').click(function(){
-        clearInterval(x);
         len = 25 * 60 * 1000; // default 25 minitues in milisecs
         breakt = 5 * 60 * 1000; // breaktime
         pause = true;
@@ -104,5 +103,8 @@ $(document).ready(function(){
         now = 0;
         $('#time').text('25');
         $('#des').text('Session: ');
+        $('#breakt').text(Math.floor(breakt/(1000*60)));
+        $('#len').text(Math.floor(len/(1000*60)));
+        clearInterval(x);
     });
 });

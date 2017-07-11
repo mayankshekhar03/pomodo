@@ -1,3 +1,82 @@
-* {
-    font-size: 1.2em;
+body {
+    text-align: center;
+}
+
+div {
+    padding: 10px;
+    overflow: auto;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 3px green;
+}
+
+button:hover {
+    opacity: 0.8;
+    box-shadow: 0px 7px 7px darkviolet;
+}
+
+button:active {
+    opacity: 1;
+    box-shadow: 0px 7px 11px darkviolet;
+}
+
+@media screen and (min-width: 1000px) {
+    * {
+        font-size: 1.3em;
+    }
+    
+    #break {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    #length {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    #bminus, #minus {
+        float: left;
+        width: 29%;
+    }
+    
+    #plus, #bplus {
+        float: right;
+        width: 29%;
+    }
+    
+    #timer {
+        width: 30%;
+        margin: 0px auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 0px red;
+        border: 1px solid green;
+    }
+    
+    #foot {
+        position: fixed;
+        bottom: 0px;
+        width: 97%;
+        font-size: .6em;
+    }
+}
+
+@media screen and (max-width:999px) {
+    * {
+        font-size: 2em;
+    }
+    
+    #bplus, #bminus, #plus, #minus {
+        width: 25%;
+    }
+    
+    
 }
