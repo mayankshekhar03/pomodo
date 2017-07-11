@@ -74,9 +74,28 @@ button:active {
         font-size: 2em;
     }
     
-    #bplus, #bminus, #plus, #minus {
-        width: 25%;
+    #break {
+        display: inline-block;
+        width: 97%;
     }
     
+    #length {
+        display: inline-block;
+        width: 97%;
+    }
     
+    #bminus, #minus {
+        float: left;
+        width: 29%;
+    }
+    
+    #plus, #bplus {
+        float: right;
+        width: 29%;
+    }
+    
+    #foot {
+        font-size: .6em;
+        margin-top: 100px;
+    }
 }
